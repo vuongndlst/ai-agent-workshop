@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phiếu học tập: Đánh giá một nguồn thông tin</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #2d3748;
+            background-color: #f7fafc;
+            padding: 24px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 32px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e2e8f0;
+        }
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #2b6cb0;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            font-size: 22px;
+            color: #2b6cb0;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+            letter-spacing: 0.5px;
+        }
+        .header p.subtitle {
+            font-size: 14px;
+            color: #4a5568;
+            font-style: italic;
+        }
+        .student-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            background: #edf2f7;
+            padding: 12px 16px;
+            border-radius: 6px;
+            margin-bottom: 24px;
+            font-size: 14px;
+        }
+        .student-info div {
+            flex: 1 1 200px;
+        }
+        .dots {
+            border-bottom: 1px dotted #4a5568;
+            display: inline-block;
+            width: 60%;
+            height: 18px;
+            vertical-align: bottom;
+        }
+        .scenario-box {
+            background-color: #ebf8ff;
+            border-left: 4px solid #3182ce;
+            padding: 16px;
+            border-radius: 4px;
+            margin-bottom: 28px;
+        }
+        .scenario-title {
+            font-weight: bold;
+            color: #2b6cb0;
+            margin-bottom: 8px;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .scenario-note {
+            display: inline-block;
+            background: #fed7d7;
+            color: #9b2c2c;
+            font-size: 12px;
+            font-weight: bold;
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-bottom: 8px;
+        }
+        .scenario-content {
+            font-size: 14.5px;
+            color: #2d3748;
+            text-align: justify;
+        }
+        .question-block {
+            margin-bottom: 24px;
+            padding-bottom: 20px;
+            border-bottom: 1px dashed #cbd5e0;
+        }
+        .question-block:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .question-title {
+            font-weight: 600;
+            font-size: 15px;
+            color: #1a202c;
+            margin-bottom: 10px;
+        }
+        .options-list {
+            margin-left: 8px;
+            margin-bottom: 12px;
+        }
+        .option-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        .checkbox-box {
+            width: 18px;
+            height: 18px;
+            border: 1.5px solid #4a5568;
+            border-radius: 50%;
+            margin-right: 10px;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+        .reason-box {
+            background: #fafafa;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 10px 14px;
+            margin-top: 10px;
+        }
+        .reason-label {
+            font-size: 13px;
+            font-weight: 600;
+            color: #4a5568;
+            margin-bottom: 6px;
+        }
+        .reason-lines {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 8px;
+        }
+        .line {
+            border-bottom: 1px dotted #a0aec0;
+            height: 14px;
+            width: 100%;
+        }
+        @media print {
+            body {
+                background: #ffffff;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                border: none;
+                padding: 0;
+                max-width: 100%;
+            }
+            .question-block {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>PHIẾU HỌC TẬP</h1>
+        <p class="subtitle">Chủ đề: Kỹ năng đánh giá nguồn thông tin trên Internet</p>
+    </div>
+
+    <div class="student-info">
+        <div>Họ và tên: <span class="dots" style="width: 65%;"></span></div>
+        <div>Lớp: <span class="dots" style="width: 50%;"></span></div>
+        <div>Ngày làm bài: <span class="dots" style="width: 50%;"></span></div>
+    </div>
+
+    <!-- Tình huống ngắn -->
+    <div class="scenario-box">
+        <div class="scenario-title">📌 TÌNH HUỐNG LỚP HỌC:</div>
+        <div class="scenario-note">⚠️ Lưu ý: Đây là ví dụ giả định phục vụ học tập, chưa được kiểm chứng.</div>
+        <div class="scenario-content">
+            Trong buổi chuẩn bị nội dung thảo luận về thói quen đọc sách của trường, bạn An đọc được một bài đăng trên diễn đàn học sinh với tiêu đề: 
+            <em>"Thói quen đọc sách bùng nổ: Lượt mượn sách thư viện học đường đã tăng 25%!"</em>. 
+            Bài đăng kèm một biểu đồ số liệu trực quan và một đường dẫn (link) trang web. An nhấp vào link thì thấy trang web vẫn mở ra bình thường. Tuy nhiên, bài viết không ghi rõ tác giả hay tổ chức thực hiện, không có thời điểm khảo sát cụ thể, không nêu phạm vi thống kê (tại thư viện trường nào, bao nhiêu học sinh) và không chỉ rõ nơi lấy số liệu gốc.
+        </div>
+    </div>
+
+    <!-- Câu hỏi 1 -->
+    <div class="question-block">
+        <div class="question-title">Câu 1. Khi bấm vào đường dẫn (link) trong bài đăng và thấy trang web vẫn mở ra bình thường, điều này chứng minh điều gì?</div>
+        <div class="options-list">
+            <div class="option-item">
+                <span class="checkbox-box"></span>
+                <span><strong>A.</strong> Nội dung và con số tăng 25% nêu trong bài đăng là hoàn toàn chính xác.</span>
+            </div>
+            <div class="option-item">
+                <span class="checkbox-box"></span>
+                <span><strong>B.</strong> Chỉ cho biết có thể mở được trang web, chưa tự chứng minh nội dung là chính xác.</span>
+            </div>
+            <div class="option-item">
+                <span class="checkbox-box"></span>
+                <span><strong>C.</strong> Trang web này đã được thư viện nhà trường chính thức kiểm duyệt và công nhận.</span>
+            </div>
+            <div class="option-item">
+                <span class="checkbox-box"></span>
+                <span><strong>D.</strong> Số liệu trong bài viết chắc chắn đã được đối chiếu với cơ sở dữ liệu gốc.</span>
+            </div>
+        </div>
+        <div class="reason-box">
+            <div class="reason-label">Lý do em chọn đáp án này (dựa trên bài học):</div>
+            <div class="reason-lines">
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Câu hỏi 2 -->
+    <div class="question-block">
+        <div class="question-title">Câu 2. Để đánh giá độ tin cậy của thông tin "lượt mượn sách thư viện tăng 25%", An cần kiểm tra những yếu tố nào về mặt số liệu?</div>
+        <div class="options-list">
+            <div class="option-item">
+                <span class="checkbox-box"></span>
+                <span><strong>A.</strong> Đơn vị, phạm vi và nơi lấy số liệu của thống kê đó.</span>
+            </div>
+            <div class="option-item">
+                <span class="checkbox-box"></span>
+                <span><strong>B.</strong> Số lượng lượt thích (like) và bình luận hào hứng dưới bài đăng.</span>
+            </div>
+            <div class="option-item">
+                <span class="checkbox-box"></span>
+                <span><strong>C.</strong> Màu sắc và hình ảnh minh họa các cuốn sách trên biểu đồ.</span>
+            </div>
+            <div class="option-item">
+                <span class="checkbox-box"></span>
+                <span><strong>D.</strong> Tốc độ tải và giao diện hiển thị của trang web khi bấm vào liên kết.</span>
+            </div>
+        </div>
+        <div class="reason-box">
+            <div class="reason-label">Lý do em chọn đáp án này (dựa trên bài học):</div>
+            <div class="reason-lines">
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Câu hỏi 3 -->
+    <div class="question-block">
+        <div class="question-title">Câu 3. Khi nhận thấy bài viết thiếu thông tin tác giả, thời điểm và chưa đủ nguồn kiểm chứng số liệu, An nên xử lý như thế nào trước khi chia sẻ trong buổi thảo luận của lớp?</div>
+        <div class="options-list">
+            <div class="option-item">
+                <span class="checkbox-box"></span>
+                <span><strong>A.</strong> Vẫn khẳng định chắc chắn thông tin trên là đúng để bài thuyết trình của nhóm thêm thuyết phục.</span>
+            </div>
+            <div class="option-item">
+                <span class="checkbox-box"></span>
+                <span><strong>B.</strong> Tự thêm tên thư viện trường mình vào bài đăng để thông tin trở nên đáng tin hơn.</span>
+            </div>
+            <div class="option-item">
+                <span class="checkbox-box"></span>
+                <span><strong>C.</strong> Đối chiếu với nguồn độc lập hoặc nguồn gốc ban đầu; nếu nguồn chưa đủ thì nói rõ điều chưa biết thay vì khẳng định chắc chắn.</span>
+            </div>
+            <div class="option-item">
+                <span class="checkbox-box"></span>
+                <span><strong>D.</strong> Bỏ qua khâu kiểm chứng và chia sẻ ngay bài viết lên nhóm chat lớp để vận động các bạn đọc sách.</span>
+            </div>
+        </div>
+        <div class="reason-box">
+            <div class="reason-label">Lý do em chọn đáp án này (dựa trên bài học):</div>
+            <div class="reason-lines">
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
